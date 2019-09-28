@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MyBlog</title>
+</head>
+<body>
+
+<div>
+    <ul>
+    <h4>所有文章：</h4>
+        {% for article in allcategory  %}
+        <li><a href="/list-{{ article.id }}">{{ article.name }}</a></li>
+        {% endfor %}
+    </ul>
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,5 @@
+/.env/
+/.idea/
+*.txt
+/_pycache/
+readme.md
