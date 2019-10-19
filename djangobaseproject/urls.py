@@ -23,8 +23,9 @@ from blog import views         #+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index,name='index'),   #+
+    path('home', views.index,name='index'),   #+
     # path('', views.index,name='index'),   #+
-
+    path('blog', views.blog,name='index'),   #+
     path('list-<int:lid>', views.list, name='list'),#列表页
     path('show-<int:sid>', views.show, name='show'),  # 内容页
     # path('tag/<tag>', views.tag, name='tags'),  # 标签列表页

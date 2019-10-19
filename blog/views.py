@@ -14,6 +14,17 @@ def index(request):
     # 把上传文传到模板页面index.html里
     return render(request, 'index.html', context)
 
+def blog(request):
+    # 对Article进行声明并实例化，然后生成对象allarticle
+    allarticle = Article.objects.all()
+    allcategory = Category.objects.all()
+    # 把查询到的对象，封装到上下文
+    context = {
+        'allarticle': allarticle,
+        'allcategory': allcategory,
+    }
+    # 把上传文传到模板页面index.html里
+    return render(request, 'blog.html', context)
 #文章列表
 def list(request,lid):
     # list = Article.objects.filter(filter=lid)#获取通过URL传进来的lid，然后筛选出对应文章

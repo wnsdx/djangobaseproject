@@ -11,9 +11,9 @@
 		<!-- Bootstrap Core CSS -->
 		<link href='{% static "css/bootstrap.min.css" %}' rel="stylesheet">
 		<!-- Custom Fonts -->
-		<link href='{%static "font-awesome/css/font-awesome.min.css" %}' rel="stylesheet" type="text/css">
+		<link href='{% static "font-awesome/css/font-awesome.min.css" %}' rel="stylesheet" type="text/css">
 		<!-- Custom CSS -->
-		<link rel="stylesheet" href="static/css/patros.css" >
+		<link rel="stylesheet" href='{% static "css/patros.css" %}' >
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 		<!--[if lt IE 9]>
@@ -33,24 +33,24 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<!-- <a class="navbar-brand" href="#"><img src="static/images/logo.png" alt="company logo" /></a> -->
+					<a class="navbar-brand" href="#"><img src="static/images/logo.png" alt="company logo" /></a>
 				</div>
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav navbar-right custom-menu">
-						<li class="active"><a href="#home">Home</a></li>
+						<li><a href="home">Home</a></li><!-- class="active" -->
 						<li><a href="#services">Services</a></li>
 						<li><a href="#meet-team">Team</a></li>
 					<!-- 	<li><a href="#portfolio1">Portofolio</a></li> -->
 						<!-- <li><a href="#contact">Contact</a></li> -->
-						<li><a href="blog.html">Blog</a></li>
+						<li><a href="blog">Blog</a></li>
 						<li><a href="single-post.html">Single</a></li>
 						<li><a href="#about">About</a></li>
 					</ul>
 				</div>
 			</div>
 		</nav>
-{% block content %}
-{% endblock %}
+    {% block content %}
+    {% endblock %}
 
 		<section id="contact">
 			<div class="container">
@@ -135,7 +135,7 @@
 				<div class="text-center height-contact-element">
 					<h2>FOLLOW US</h2>
 				</div>
-				<img class="img-responsive displayed" src="static/images/short.png" alt="short" />
+				<img class="img-responsive displayed" src='{% static "images/short.png" %}' alt="short" />
 				<div class="text-center height-contact-element">
 					<ul class="list-unstyled list-inline list-social-icons">
 						<li class="active"><a href="#"><i class="fa fa-facebook social-icons"></i></a></li>
